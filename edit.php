@@ -21,7 +21,7 @@ $product = $pdo->query("SELECT * FROM products WHERE id = '$id'")->fetch();
     <input type="text" name="name" placeholder="Название" value="<?=$product["name"]?>">
     <input type="number" name="price" placeholder="Цена"value="<?=$product["price"]?>">
     <input type="number" name="article" placeholder="Артикул"value="<?=$product["article"]?>">
-    <input type="submit" name="Добавить">
+    <input type="submit" value="Изменить">
 </form>
 </body>
 </html>

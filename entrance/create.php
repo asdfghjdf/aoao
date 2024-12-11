@@ -15,14 +15,14 @@ $products = $pdo->query("SELECT * FROM products")->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <h1>Добавить товар</h1>
 <form action="/entrance/actions/store.php" method="post">
-    <input type="datetime-local" name="date" placeholder="Дата">
+    <input type="date" name="date" placeholder="Дата">
     <select name="product_id" id="">
         <?php foreach ($products as $item):?>
         <option value="<?=$item['id']?>"><?=$item['name']?></option>
         <?php endforeach;?>
     </select>
     <input type="number" name="amount" placeholder="Кол-во">
-    <input type="submit" name="Добавить">
+    <input type="submit" value="Добавить">
 </form>
 </body>
 </html>

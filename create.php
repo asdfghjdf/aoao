@@ -13,7 +13,7 @@
     <input type="text" name="name" placeholder="Название">
     <input type="number" name="price" placeholder="Цена">
     <input type="number" name="article" placeholder="Артикул">
-    <input type="submit" name="Добавить">
+    <input type="submit" value="Добавить">
 </form>
 </body>
 </html>

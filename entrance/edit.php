@@ -18,14 +18,14 @@ $receipt = $pdo->query("SELECT * FROM receipts WHERE id = '$id'")->fetch(PDO::FE
 <h1>Добавить товар</h1>
 <form action="/entrance/actions/update.php" method="post">
     <input type="hidden" name="id" placeholder="aoaoa" value="<?= $receipt["id"]?>">
-    <input type="datetime-local" name="date" placeholder="Дата" value="<?= $receipt["date"]?>">
+    <input type="date" name="date" placeholder="Дата" value="<?= $receipt["date"]?>">
     <select name="product_id" id="">
         <?php foreach ($products as $item):?>
             <option value="<?=$item['id']?>" <?= $item["id"]==$receipt["product_id"]?"selected":""?>><?=$item['name']?></option>
         <?php endforeach;?>
     </select>
     <input type="number" name="amount" placeholder="Кол-во" value="<?= $receipt["amount"]?>">
-    <input type="submit" name="Добавить">
+    <input type="submit" value="Изменить">
 </form>
 </body>
     </html>
