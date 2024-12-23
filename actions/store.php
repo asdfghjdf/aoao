@@ -2,10 +2,10 @@
 /** @var PDO $pdo */
 $pdo = require $_SERVER['DOCUMENT_ROOT'] . '/db.php';
 
-$name = $_POST['name'];
-$price = $_POST['price'];
-$article = $_POST['article'];
+$date = $_POST['date'];
+$product_id = $_POST['product_id'];
+$amount = $_POST['amount'];
 
-$pdo->query("INSERT INTO `products` (`name`, `price`, `article`) VALUES ('$name', '$price', '$article')");
+$pdo->query("INSERT INTO `receipts` (`date`, `product_id`, `amount`) VALUES ('$date', '$product_id', '$amount')");
 
-header('Location: /');
+header('Location: /entrance/');

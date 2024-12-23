@@ -3,10 +3,10 @@
 $pdo = require $_SERVER['DOCUMENT_ROOT'] . '/db.php';
 
 $id = $_POST['id'];
-$name = $_POST['name'];
-$price = $_POST['price'];
-$article = $_POST['article'];
+$date = $_POST['date'];
+$product_id = $_POST['product_id'];
+$amount = $_POST['amount'];
 
-$pdo->query("UPDATE `products` SET `name` = '$name', `price` = '$price', `article` = '$article' WHERE `id` = '$id'");
+$pdo->query("UPDATE `receipts` SET `date` = '$date', `product_id` = '$product_id', `amount` = '$amount' WHERE `id` = '$id'");
 
-header('Location: /');
+header('Location: /entrance/');

@@ -4,6 +4,6 @@ $pdo = require $_SERVER['DOCUMENT_ROOT'] . '/db.php';
 
 $id = $_GET['id'];
 
-$pdo->query("DELETE FROM `receipts` WHERE `id` = '$id'");
+$pdo->query("DELETE FROM `products` WHERE `id` = '$id'");
 
-header('Location: /entrance/');
+header('Location: /');
